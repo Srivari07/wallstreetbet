@@ -19,12 +19,12 @@ class TickerCounts:
     def __init__(self):
         self.webscraper_limit = 2000
         config = configparser.ConfigParser()
-        config.read('Configs/config.ini')
+        config.read("Backend/Configs/config.ini")
         self.subreddits = json.loads(config['FilteringOptions']['Subreddits'])
 
         stop_words = set(json.loads(config['FilteringOptions']['StopWords']))
         block_words = set(json.loads(config['FilteringOptions']['BlockWords']))
-        with open('Configs/tickets.json') as f:
+        with open('Backend/Configs/tickets.json') as f:
             tickers = set(json.load(f))
         exclude = stop_words | block_words
         self.keep_tickers = tickers - exclude  # Remove words/tickers in exclude
