@@ -1,0 +1,67 @@
+[
+    {
+        "Ticker": "SPY",
+        "Open": 394.88,
+        "High": 395.7777,
+        "Low": 389.75,
+        "Price": 389.8,
+        "Volume": 132893864,
+        "LatestTradingDay": "2022-06-10",
+        "PreviousClose": 401.44,
+        "Change": -11.64,
+        "ChangePercent": "-2.8996%",
+        "Mentions": 22
+    },
+    {
+        "Ticker": "CPI",
+        "Open": 26.48,
+        "High": 26.48,
+        "Low": 26.42,
+        "Price": 26.4453,
+        "Volume": 890,
+        "LatestTradingDay": "2022-06-10",
+        "PreviousClose": 26.7381,
+        "Change": -0.2928,
+        "ChangePercent": "-1.0951%",
+        "Mentions": 19
+    },
+    {
+        "Ticker": "TSLA",
+        "Open": 705.47,
+        "High": 718.5,
+        "Low": 683.74,
+        "Price": 696.69,
+        "Volume": 32696966,
+        "LatestTradingDay": "2022-06-10",
+        "PreviousClose": 719.12,
+        "Change": -22.43,
+        "ChangePercent": "-3.1191%",
+        "Mentions": 11
+    },
+    {
+        "Ticker": "MLFB",
+        "Open": 0.0235,
+        "High": 0.0262,
+        "Low": 0.022,
+        "Price": 0.022,
+        "Volume": 782149,
+        "LatestTradingDay": "2022-06-10",
+        "PreviousClose": 0.0238,
+        "Change": -0.0018,
+        "ChangePercent": "-7.5630%",
+        "Mentions": 10
+    },
+    {
+        "Ticker": "SNPW",
+        "Open": 0.0137,
+        "High": 0.0137,
+        "Low": 0.0094,
+        "Price": 0.0098,
+        "Volume": 1516393,
+        "LatestTradingDay": "2022-06-10",
+        "PreviousClose": 0.0091,
+        "Change": 0.0008,
+        "ChangePercent": "8.3728%",
+        "Mentions": 9
+    }
+]

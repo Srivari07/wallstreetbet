@@ -1,5 +1,4 @@
 from dotenv import dotenv_values
-import configparser
 import datetime as dt
 import json
 import re
@@ -11,6 +10,8 @@ import pandas as pd
 import praw
 from tqdm import tqdm
 
+from Configs import blocklist,stopwords,subreddits
+
 Post = namedtuple('Post', 'id,title,score,comments,upvote_ratio,total_awards')
 
 
@@ -18,12 +19,10 @@ class TickerCounts:
 
     def __init__(self):
         self.webscraper_limit = 2000
-        config = configparser.ConfigParser()
-        config.read("Backend/Configs/config.ini")
-        self.subreddits = json.loads(config['FilteringOptions']['Subreddits'])
-
-        stop_words = set(json.loads(config['FilteringOptions']['StopWords']))
-        block_words = set(json.loads(config['FilteringOptions']['BlockWords']))
+        self.subreddits=subreddits.Subreddits
+        stop_words=set(stopwords.StopWords)
+        block_words=set(blocklist.BlockWords)
+        
         with open('Backend/Configs/tickets.json') as f:
             tickers = set(json.load(f))
         exclude = stop_words | block_words
@@ -36,7 +35,6 @@ class TickerCounts:
 
     def _get_posts(self):
         # Scrape subreddits. Currently it fetches additional data, only using title for now
-        # reddit = praw.Reddit('ClientSecrets')
         config=dotenv_values(".env")
         reddit = praw.Reddit(
             client_id=config['client_id'],
@@ -47,7 +45,7 @@ class TickerCounts:
         new_bets = reddit.subreddit(subreddits).new(
             limit=self.webscraper_limit)
 
-        for post in tqdm(new_bets, desc='Selecting relevant data from webscraper', total=self.webscraper_limit):
+        for post in tqdm(new_bets, desc='Gathering relevant data from webscraper', total=self.webscraper_limit):
             yield Post(
                 post.id,
                 post.title,

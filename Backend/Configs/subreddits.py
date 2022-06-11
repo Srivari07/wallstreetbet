@@ -1,0 +1,1 @@
+Subreddits = ["wallstreetbets","robinhoodpennystocks","pennystocks"]

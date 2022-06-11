@@ -34,6 +34,8 @@ class FinanceAnalysis:
         group1 = asyncio.gather(*tasks)
         results = loop.run_until_complete(group1)
         df = pd.DataFrame(results)
+        df.rename(columns={'01. symbol': "Ticker", '02. open': "Open", '03. high': "High", '04. low': "Low", '05. price': "Price", '06. volume': "Volume", '07. latest trading day': "LatestTradingDay", '08. previous close': "PreviousClose",
+        '09. change': "Change", '10. change percent': "ChangePercent"}, inplace=True)
 
         # Save to file to load into alpha analysis script
         output_path = data_directory / f'{dt.date.today()}_df_financial.csv'
