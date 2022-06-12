@@ -1,3 +1,4 @@
+
 import pandas as pd
 from datetime import datetime
 import os.path
@@ -26,6 +27,10 @@ def dataExists():
 	if not os.path.exists(financial_filename):
 		updateFinancialData()
 
+@app.route("/", methods=['GET'])
+def home():
+	msg ="Welcome to home page go to /data"
+	return msg
 
 @app.route('/data', methods=['GET'])
 def getData() -> str:
