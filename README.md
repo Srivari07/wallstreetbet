@@ -1,7 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/69836058/168459575-d4ec8976-73b6-4eb1-8c0d-92778086e4c8.png) 
 # Wallstreetbetx 📈
 
-See trending stock tickers on subredit [r/wallstreetbet](https://www.reddit.com/r/wallstreetbets/) and check Stock perfomance
+See trending stock tickers on subreddit [r/wallstreetbet](https://www.reddit.com/r/wallstreetbets/) and check Stock performance
 
 # Screenshot
 ![Screenshot 2022-06-12 173940](https://user-images.githubusercontent.com/69836058/173238842-8b01f17d-ae44-468a-bce3-7f975357b7dd.png)
